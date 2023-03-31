@@ -7,7 +7,7 @@
 
 .app {
     display: flex;
-    justify-content: cewnter;
+    justify-content: center;
     align-items: center;
     height: 100vh;
 }

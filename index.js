@@ -1,6 +1,6 @@
 const keys = document.querySelectorAll('.key');
-const display_input = document.querySelector('.display .input');
-const display_output = document.querySelector('.display .output');
+const display_input = document.querySelector('.input');
+const display_output = document.querySelector('.output');
 
 let input = "";
 
@@ -12,7 +12,10 @@ for (let key of keys) {
             input = "";
             display_input.innerHTML = "";
             display_output.innerHTML = "";
+
         } else if (value == "backspace") {
+            // params for slice method starts with index 0 on the left of the array which is default and removes -1 
+            // index starting from the end of the array. [1, 2, 3, 4] 3 will = -1 in the params and removes everything before it 
             input = input.slice(0, -1);
             display_input.innerHTML = CleanInput(input);
 
